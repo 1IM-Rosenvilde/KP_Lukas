@@ -1,0 +1,9 @@
+#NavigationBar {
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+    border-radius: 2rem;
+    border-color: black;
+    border-width: .3rem;
+    border-style: solid;
+}
