@@ -3,43 +3,59 @@ Projects = [
         "Title": "Er jeg død?",
         "Description": "ja",
         "Image": "Images/You Deer.png"
+    },
+    {
+        "Title": "Test",
+        "Description": "WOW",
+        "Image": "Images/Logo.png"
     }
 ]
 
+var ProjectIndex = 0;
+
+
+function SlideLeft() {
+    if (ProjectIndex == 0) {
+        ProjectIndex = Projects.length - 1
+    }
+
+    else {
+        ProjectIndex -= 1
+    }
+
+    LoadCurrentProject()
+}
+document.getElementById("SlideLeft").addEventListener("click", SlideLeft)
+
+function SlideRight() {
+    if (ProjectIndex >= Projects.length - 1) {
+        ProjectIndex = 0
+    }
+
+    else {
+        ProjectIndex += 1
+    }
+
+    LoadCurrentProject()
+}
+document.getElementById("SlideRight").addEventListener("click", SlideRight)
+
 
 function LoadProject(Title, Description, Image) {
-    const ProjectBox = document.createElement("div")
+    const TitleText = document.getElementById("ProjectTitle");
+    TitleText.innerHTML = Title;
 
-    ProjectBox.classList.add("ProjectBox")
+    const DescriptionText = document.getElementById("ProjectDescription");
+    DescriptionText.innerHTML = Description;
 
-    const TitleText = document.createElement("h1")
-
-    TitleText.innerHTML = Title
-    TitleText.classList.add("ProjectTitle")
-
-    const ContentBox = document.createElement("div")
-
-    ContentBox.classList.add("ProjectContentBox")
-
-    const DescriptionText = document.createElement("p")
-
-    DescriptionText.innerHTML = Description
-    DescriptionText.classList.add("ProjectDescription")
-
-    const ProjectImage = document.createElement("img")
-
-    ProjectImage.src = Image
-    ProjectImage.classList.add("ProjectImage")
-
-    ProjectBox.appendChild(TitleText)
-    ProjectBox.appendChild(ContentBox)
-    ContentBox.appendChild(DescriptionText)
-    ContentBox.appendChild(ProjectImage)
-    document.getElementById("Projects").appendChild(ProjectBox)
+    const ProjectImage = document.getElementById("ProjectImage");
+    ProjectImage.src = Image;
 }
 
-for (Index = 0; Index < Projects.length; Index++) {
-    const Project = Projects[Index]
 
-    LoadProject(Project["Title"], Project["Description"], Project["Image"])
+function LoadCurrentProject() {
+    const Project = Projects[ProjectIndex];
+    LoadProject(Project["Title"], Project["Description"], Project["Image"]);
 }
+
+LoadCurrentProject()
