@@ -8,6 +8,11 @@ Projects = [
         "Title": "Test",
         "Description": "WOW",
         "Image": "Images/Logo.png"
+    },
+    {
+        "Title": "Test2",
+        "Description": "WOW2",
+        "Image": "Images/Logo.png"
     }
 ]
 

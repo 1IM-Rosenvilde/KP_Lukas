@@ -52,4 +52,11 @@
     width: 5rem;
     font-size: 3rem;
     border-radius: 5rem;
+    background-color: lightgray;
+    border-width: .3rem;
+    font-weight: bold;
+}
+
+.SlideButton:hover {
+    background-color: gray;
 }
