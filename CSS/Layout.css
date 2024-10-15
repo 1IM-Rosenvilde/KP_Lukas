@@ -6,6 +6,7 @@
     border-color: black;
     border-width: .3rem;
     border-style: solid;
+    padding: 1rem;
 }
 
 #Projects {
@@ -59,4 +60,9 @@
 
 .SlideButton:hover {
     background-color: gray;
+}
+
+a {
+    font-size: 2rem;
+    color: black;
 }
