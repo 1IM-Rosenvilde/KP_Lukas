@@ -54,6 +54,7 @@
     width: 5rem;
     font-size: 3rem;
     border-radius: 5rem;
+    border-style: solid;
     background-color: lightgray;
     border-width: .3rem;
     font-weight: bold;
@@ -70,4 +71,55 @@ a {
 
 #LogoImage {
     height: 8rem;
+}
+
+.CollapseNavigation {
+    display: block;
+}
+
+#NavigationMenu {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 1rem;
+    border-width: .2rem;
+    border-style: solid;
+    display: none;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: white;
+}
+
+#NavigationMenu:hover {
+    background-color: lightgray;
+}
+
+#DropdownMenu {
+    margin-top: 1rem;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-color: black;
+    border-width: .3rem;
+    border-style: solid;
+    border-radius: 1rem;
+    padding: 1rem;
+    background-color: lightgray;
+}
+
+@media (max-width: 600px) {
+    .CollapseNavigation {
+        display: none;
+    }
+
+    #NavigationMenu {
+        display: block;
+    }
+}
+
+@media (min-width: 600.01px) {
+    #DropdownMenu {
+        display: none !important;
+        background-color: aqua;
+    }
 }

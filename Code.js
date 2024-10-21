@@ -13,10 +13,33 @@ Projects = [
         "Title": "Test2",
         "Description": "WOW2",
         "Image": "Images/Logo.png"
+    },
+    {
+        "Title": "Er Michal cooked?",
+        "Description": "Helt klart",
+        "Image": "Images/You Deer.png"
+    },
+    {
+        "Title": "Er Kristian Batman?",
+        "Description": "Ja/Nei",
+        "Image": "Images/You Deer.png"
     }
 ]
 
 var ProjectIndex = 0;
+
+function MenuButtonPressed() {
+    const Display = document.getElementById("DropdownMenu").style.display;
+
+    if (Display == "flex") {
+        document.getElementById("DropdownMenu").style.display = "none";
+    }
+
+    else if (Display == "none" || Display == "") {
+        document.getElementById("DropdownMenu").style.display = "flex";
+    }
+}
+document.getElementById("NavigationMenu").addEventListener("click", MenuButtonPressed);
 
 
 function SlideLeft() {
