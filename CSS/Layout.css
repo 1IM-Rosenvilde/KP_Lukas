@@ -31,6 +31,7 @@
 
 #ProjectTitle {
     font-size: 5rem;
+    text-align: center;
 }
 
 #ProjectDescription {
@@ -114,6 +115,39 @@ a {
 
     #NavigationMenu {
         display: block;
+    }
+
+    #ProjectContentBox {
+        flex-direction: column;
+    }
+
+    #ProjectImage {
+        width: 100%;
+    }
+
+    #ProjectTitle {
+        font-size: 3rem;
+    }
+
+    #ProjectDescription {
+        font-size: 2rem;
+    }
+
+    #Projects {
+        flex-direction: column;
+    }
+
+    #SlideLeft {
+        position: relative;
+        right: 5rem;
+        margin-top: -5rem;
+        order: 1;
+    }
+
+    #SlideRight {
+        position: relative;
+        left: 5rem;
+        margin-top: 2rem;
     }
 }
 
